@@ -1,0 +1,18 @@
+Cows and Bulls
+==============
+
+This is an implementation of the classic Cows and Bulls game, that uses English words instead of numbers.
+
+A quick overview of rules:
+* The game will pick out a random valid English word from a list of words, 3-8 characters long depending the player's choice. On *nix platforms, the words will be picked from /etc/dictionaries-common/words.
+
+* The player has to find out the word picked by the computer by guessing with the words of the same length as chosen for the game.
+
+* The game will tell the number of cows and bulls in the guessed word. If an alphabet in the word guessed by the player is present in the same position in the word picked by the game, it will be considered a cow. If the alphabet in the word guessed by the player is present in the word picked by the game, but in a different position, it will be counted as a bull.
+
+* For example, if the game picks 'brain' and the user guesses 'think'. The game will give the result as 2 bulls for 'i' and 'n'. If the user guesses 'plant' for the same word, the result will be 1 cow and 1 bull.
+
+* If a user's guess contains multiple occurences of an alphabet that is present once in the word picked by the game, 'cow' will always take precedence over a 'bull'. This means that if one occurence of the alphabet is a cow, the other occurrence will not be counted as a bull, because the same alphabet is already in the right position. But if there is no cow, both will be counted as bulls.
+
+* If there are multiple occurrences of an alphabet in the word picked by the game and the word guessed the player contains it, 2 bulls will be counted for the same single alphabet. If there are multiple bulls for the same, each occurrence of the alphabet will be considered a bull for each of the occurrence in the word picked by the game.
+
