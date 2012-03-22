@@ -100,6 +100,12 @@ void Game::check_guessed_word(string guessed_word)
 {
   int cows, bulls;
   cows_and_bulls cb;
+  if (guessed_word.length() != chosen_word.length())
+  {
+    cout<<"The guessed word should be "<<chosen_word.length()
+        <<" characters long"<<endl;
+    return;
+  }
   Guess g(guessed_word);
   cb = g.check_guess(chosen_word);
   cows = cb.first;
