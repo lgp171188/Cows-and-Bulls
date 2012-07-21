@@ -3,6 +3,5 @@ TODO
 
 * Refactor the design of the classes and the code.
 * Describe the rules of the game unambiguously.
-* Set up the project to use makefile.
 * Word list on Windows?
 * High scores for each user.
