@@ -1,7 +1,7 @@
 Cows and Bulls
 ==============
 
-This is an implementation of the classic Cows and Bulls game, that uses English words instead of numbers.
+This is an implementation of the classic Cows and Bulls game, that uses English words instead of numbers. This program is distributed unders the terms of the GNU General Public License version 3.
 
 A quick overview of rules:
 * The game will pick out a random valid English word from a list of words, 3-8 characters long depending the player's choice. On *nix platforms, the words will be picked from /usr/share/dict/words.
