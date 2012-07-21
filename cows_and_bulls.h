@@ -13,7 +13,7 @@ using namespace std;
 
 #define MIN_WORD_LENGTH 3
 #define MAX_WORD_LENGTH 8
-#define DICT_FILE_NAME "/etc/dictionaries-common/words"
+#define DICT_FILE_NAME "/usr/share/dict/words"
 
 typedef pair<int, int> cows_and_bulls;
 

@@ -4,7 +4,7 @@ Cows and Bulls
 This is an implementation of the classic Cows and Bulls game, that uses English words instead of numbers.
 
 A quick overview of rules:
-* The game will pick out a random valid English word from a list of words, 3-8 characters long depending the player's choice. On *nix platforms, the words will be picked from /etc/dictionaries-common/words.
+* The game will pick out a random valid English word from a list of words, 3-8 characters long depending the player's choice. On *nix platforms, the words will be picked from /usr/share/dict/words.
 
 * The player has to find out the word picked by the computer by guessing with the words of the same length as chosen for the game.
 
