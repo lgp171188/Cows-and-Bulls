@@ -1,13 +1,17 @@
-OUTDIR = bin
-OUTFILE = cows-and-bulls
-SOURCE_FILES = cows_and_bulls.cpp
+SRCS=cows_and_bulls.cpp
+OBJS=$(subst .cpp,.o,$(SRCS))
 
-cows-and-bulls: cows_and_bulls.cpp bin
-	g++ -o $(OUTDIR)/$(OUTFILE) $(SOURCE_FILES)
+cows-and-bulls: $(OBJS) bin
+	$(CXX) -o bin/cows-and-bulls $(LDFLAGS) $(OBJS) $(LDLIBS)
+
 bin:
-	mkdir $(OUTDIR)
+	mkdir bin
 
 clean:
-	rm -rf $(OUTDIR)
-install:
-	mv $(OUTDIR)/$(OUTFILE) $(DESTDIR)/usr/games/
+	rm -f $(OBJS)
+
+dist-clean: clean
+	rm -f bin/cows-and-bulls
+
+install: cows-and-bulls
+	mv bin/cows-and-bulls $(DESTDIR)/usr/games/
